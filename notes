@@ -1,0 +1,40 @@
+const Rating = () => {
+  const stars = Array.from({ length: 5 }, (_, i) => i + 1);
+  const clicked = (index) => console.log("clicked:", index);
+  const hovered = (direction, index) =>
+    console.log("hovered!", direction, index);
+
+  return (
+    // <div style={style.container}>
+    //   <h2 style={style.heading}>Rate Us!</h2>
+    // </div>
+    <div className="rating-container">
+      <h2>Rate Us!</h2>
+      <div className="stars">
+        {stars.map((star, index) => (
+          <span
+            onClick={() => clicked(index)}
+            key={star}
+            onMouseEnter={() => hovered("enter", index)}
+            onMouseLeave={() => hovered("leave", index)}
+            className="stars"
+          >
+            {"\u2605"}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};
+// const style = {
+//   container: {
+//     textAlign: "center",
+//     fontFamily: "sans-serif",
+//     padding: "20px",
+//   },
+//   heading: {
+//     color: "red",
+//   },
+// };
+export default Rating;
+

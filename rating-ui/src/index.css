@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: aquamarine;
+}
+.rating-container {
+  text-align: center;
+  padding: 40px 30px;
+  border: 1px solid wheat;
+  width: 400px;
+  border-radius: 8px;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 12px rgb(60, 141, 212);
+}
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 15px;
+}
+.stars {
+  transition: color 0.2s ease-in-out;
+}
+.stars.active {
+  color: gold;
+}
+.feedback {
+  font-size: 2rem;
+  font-weight: bold;
+  color: blueviolet;
+}
